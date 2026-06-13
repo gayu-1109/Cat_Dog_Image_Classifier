@@ -35,12 +35,12 @@ python train_model.py
 
 ## 📸 Project Screenshots
 
-### 🏠 Upload Image Page
+### 🐱 Cat Prediction
 <p align="center">
   <img src="screenshots/cat.png" width="500"/>
 </p>
 
-### 🧠 Prediction Result (Cat 🐱)
+### 🐶 Dog Prediction
 <p align="center">
   <img src="screenshots/dog.png" width="500"/>
 </p>
