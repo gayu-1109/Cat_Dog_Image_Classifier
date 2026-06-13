@@ -2,12 +2,17 @@
 
 📌 Project Overview
 This is a Deep Learning Image Classification Web App built using Convolutional Neural Networks (CNN) and deployed using Flask.
+
 The model predicts whether an uploaded image is a Dog 🐶 or Cat 🐱 in real-time through a simple web interface.
 
 🛠 Tech Stack
+
 Python 🐍
+
 TensorFlow / Keras 🤖
+
 Flask 🌐
+
 NumPy
 HTML / CSS
 
