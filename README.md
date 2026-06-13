@@ -32,3 +32,15 @@ http://127.0.0.1:5000/
 The trained model file (dog_cat_model.h5) is not included in this repository due to GitHub file size limitations.
 👉 To generate it locally, run:
 python train_model.py
+
+## 📸 Project Screenshots
+
+### 🏠 Upload Image Page
+<p align="center">
+  <img src="screenshots/cat.png" width="500"/>
+</p>
+
+### 🧠 Prediction Result (Cat 🐱)
+<p align="center">
+  <img src="screenshots/dog.png" width="500"/>
+</p>
