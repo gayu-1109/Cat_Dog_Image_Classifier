@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dog vs Cat Classifier</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 30px;
+      background-color: rgb(46, 207, 207);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="file"] {
+      margin: 20px;
+    }
+
+    img {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    .box1 {
+      border: 2px solid black;
+      width: 50vw;
+      height: 80vh;
+      background-color: rgb(194, 230, 230);
+      border: none;
+    }
+
+    .subhead {
+      color: deeppink;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🐶 Dog vs Cat 🐱 Classifier</h1>
+  <div class="container">
+    <div class="box1">
+      <h2 class="subhead">Upload an Image</h2>
+
+      <form id="upload-form" action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" required><br>
+        <div class="buttons">
+          <button type="submit" class="btn btn-primary">Predict</button>
+          <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+        </div>
+      </form>
+
+      {% if prediction %}
+      <h2 class="result">Prediction: {{ prediction }}</h2>
+      <img src="{{ image_path }}" alt="Uploaded Image" width="250">
+      {% endif %}
+
+    </div>
+  </div>
+
+  <script>
+    function clearForm() {
+      document.getElementById("upload-form").reset();
+      document.querySelector(".result")?.remove();
+      document.querySelector("img")?.remove();
+    }
+  </script>
+
+</body>
+
+</html>
